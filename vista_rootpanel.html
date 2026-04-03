@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+	<title>App Clara</title>
+</head>
+<body>
+	<form method='POST'><main><form method='POST'><label>Mensaje para el muro</label><input name='mensaje' type='text' required><button type='submit'>Publicar</button>
+			<div style="overflow-x:auto;">
+				<table>
+					<thead><tr><th>Datos Registrados</th></tr></thead>
+					<tbody>
+						{{range .}}
+						<tr>
+							<td>
+								{{range $k, $v := .}}
+									<strong>{{$k}}:</strong> {{$v}} | 
+								{{end}}
+							</td>
+						</tr>
+						{{end}}
+					</tbody>
+				</table>
+			</div></form></main></form>
+</body>
+</html>

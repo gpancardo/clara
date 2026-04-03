@@ -1,0 +1,25 @@
+pagina Inicio en "/"
+    contenedor
+        campo "Bienvenido a Clara v2.1"
+        enlace "Crear una cuenta nueva" a "/signup"
+        enlace "Ya tengo cuenta (Login)" a "/login"
+    fin
+fin
+
+pagina Registro en "/signup"
+    contenedor
+        campo "Tu Email" as "email"
+        campo "Tu Clave" as "pass"
+        boton "Crear Cuenta"
+        enlace "Ya tengo cuenta" a "/login"
+    fin
+fin
+
+pagina Acceso en "/login"
+    contenedor
+        campo "Email" as "user"
+        campo "Password" as "pass"
+        boton "Entrar"
+        enlace "No tengo cuenta" a "/signup"
+    fin
+fin
